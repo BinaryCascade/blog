@@ -1,0 +1,4 @@
+baseURL: https://example.org/
+languageCode: ru-ru
+title: My New Hugo Site
+theme: ["PaperMod"]
