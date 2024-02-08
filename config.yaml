@@ -1,4 +1,95 @@
-baseURL: https://example.org/
-languageCode: ru-ru
-title: My New Hugo Site
-theme: ["PaperMod"]
+# Meta data
+baseURL: "https://example.org/"
+
+defaultContentLanguage: ru
+languages:
+  en:
+    disabled: false
+  ru:
+    disabled: false
+
+title: "tem [notes]"
+theme: PaperMod
+
+# Site config
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  env: production
+  title: "tem [notes]"
+  description: "Notes and stuff by @tembeon"
+  keywords: [ Blog, tem_notes ]
+  author: "Tembeon"
+  DateFormat: "January 2, 2006"
+  defaultTheme: auto # dark, light
+  disableThemeToggle: false
+
+  # Post settings
+  ShowReadingTime: false
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: false
+  tocopen: false
+
+  # home page settings
+  homeInfoParams:
+    Title: Welcome to tem [notes]
+    Content: "Notes and stuff by @tembeon"
+
+  socialIcons:
+    - name: "telegram channel"
+      url: "https://t.me/tembeon_notes"
+    - name: "telegram"
+      url: "https://t.me/tembeon"
+
+  editPost:
+    URL: "https://github.com/Tembeon/tem_notes/content"
+    Text: "Suggest Changes" # edit text
+    appendFilePath: true
+
+  # for search
+  # https://fusejs.io/api/options.html
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
+    keys: [ "title", "permalink", "summary", "content" ]
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # necessary for search
+
+menu:
+  main:
+    - identifier: search
+      name: search
+      url: /search/
+      weight: 10
+    - identifier: tags
+      name: tags
+      url: /tags/
+      weight: 20
+
