@@ -1,0 +1,6 @@
+/.hugo_build.lock
+.idea
+.vscode
+
+# maybe remove this, contains generated site files
+public
