@@ -1,7 +1,7 @@
 ---
 title: "File nesting"
 date: 2024-02-08T21:44:24+03:00
-draft: true
+draft: false
 tags: [ "IDE", "IntelliJ IDEA", "VS Code", ]
 author: "Tembeon"
 showToc: true
@@ -13,7 +13,7 @@ cover:
   relative: true
 ---
 
-## Проблема
+# Проблема
 
 Порой, в проекте накапливается много файлов, имеющих одно имя, но разное расширение. И они очень мешают навигации по
 файловой структуре. Например, во Flutter проектах часто используют
@@ -41,7 +41,7 @@ cover:
 
 ![Untitled](/articles/file_nesting/images/Untitled.png)
 
-### Настройка в IntelliJ IDEA
+## Настройка в IntelliJ IDEA
 
 Для начала, необходимо открыть любой проект. Нажмите дважды на Shift и напишите “File nesting”.
 
@@ -63,22 +63,32 @@ cover:
 
 ![Untitled](/articles/file_nesting/images/Untitled%204.png)
 
-### Настройка в VS Code
+## Настройка в VS Code
 
 Открыть настройки (settings.json) и добавить следующие строчки:
 
+```dart
+void main() {
+  final value = 'Hello world';
+  print(value);
+}
+```
+
 ```json
-"explorer.fileNesting.enabled": true,
-"explorer.fileNesting.expand": false,
-"explorer.fileNesting.patterns": {
-"pubspec.yaml": ".flutter-plugins, .packages, .dart_tool, .flutter-plugins-dependencies, .metadata, .packages, pubspec.lock, build.yaml, analysis_options.yaml, all_lint_rules.yaml, flutter_*.yaml, icons_launcher.yaml",
-".gitignore": ".gitattributes, .gitmodules, .gitmessage, .mailmap, .git-blame*",
-"readme.*": "authors, backers.md, changelog*, citation*, code_of_conduct.md, codeowners, contributing.md, contributors, copying, credits, governance.md, history.md, license*, maintainers, readme*, security.md, sponsors.md",
-"*.dart": "$(capture).g.dart, $(capture).freezed.dart, $(capture).config.dart",
-"*.graphql": "$(capture).gql.dart, $(capture).*.gql.dart",
-"schema.graphql": "schema.schema.gql.dart",
-"firebase.json": ".firebaserc"
-},
+{
+  // ...rest of settings.json
+  "explorer.fileNesting.enabled": true, // comment
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    "pubspec.yaml": ".flutter-plugins, .packages, .dart_tool, .flutter-plugins-dependencies, .metadata, .packages, pubspec.lock, build.yaml, analysis_options.yaml, all_lint_rules.yaml, flutter_*.yaml, icons_launcher.yaml",
+    ".gitignore": ".gitattributes, .gitmodules, .gitmessage, .mailmap, .git-blame*",
+    "readme.*": "authors, backers.md, changelog*, citation*, code_of_conduct.md, codeowners, contributing.md, contributors, copying, credits, governance.md, history.md, license*, maintainers, readme*, security.md, sponsors.md",
+    "*.dart": "$(capture).g.dart, $(capture).freezed.dart, $(capture).config.dart",
+    "*.graphql": "$(capture).gql.dart, $(capture).*.gql.dart",
+    "schema.graphql": "schema.schema.gql.dart",
+    "firebase.json": ".firebaserc"
+  }
+}
 ```
 
 Ключ это паттерн главного файла, а значение — файлы, которые будут дочерними для него.

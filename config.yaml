@@ -50,6 +50,9 @@ params:
   showtoc: false
   tocopen: false
 
+  assets:
+    disableHLJS: true
+
   # home page settings
   homeInfoParams:
     Title: Welcome to tem [notes]
@@ -95,3 +98,17 @@ menu:
       url: /tags/
       weight: 20
 
+pygmentsUseClasses: true
+markup:
+  highlight:
+    noClasses: false
+    anchorLineNos: false
+    codeFences: true
+    # guessSyntax: true
+    lineNos: true
+    style: github-dark
+
+  tableOfContents:
+    endLevel: 3
+    ordered: false
+    startLevel: 1
