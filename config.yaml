@@ -5,8 +5,10 @@ defaultContentLanguage: ru
 languages:
   en:
     disabled: false
+    contentDir: content/en
   ru:
     disabled: false
+    contentDir: content/ru
 
 title: "tem [notes]"
 theme: PaperMod

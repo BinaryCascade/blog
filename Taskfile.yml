@@ -1,0 +1,9 @@
+version: '3'
+
+tasks:
+  hugo:server:
+    desc: Starts the Hugo server for local development on Windows with WSL2.
+    cmds:
+      - echo "Starting Hugo server..."
+      - hugo server -D --poll 700ms
+    silent: false
