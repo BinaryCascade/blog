@@ -4,6 +4,10 @@ tasks:
   hugo:server:
     desc: Starts the Hugo server for local development on Windows with WSL2.
     cmds:
-      - echo "Starting Hugo server..."
+      - echo "[i] Starting Hugo server..."
       - hugo server -D --poll 700ms
-    silent: false
+    silent: true
+  repo:init:
+    desc: Initialize repository after cloning by downloading submodules.
+    cmds:
+      - git submodule update --init --recursive
