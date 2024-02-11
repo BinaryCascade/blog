@@ -6,9 +6,50 @@ languages:
   en:
     disabled: false
     contentDir: content/en
+    params:
+      # General info
+      description: "Notes and stuff by @tembeon"
+      keywords: [Blog, Development, tem_notes]
+
+      # Info on homepage
+      homeInfoParams:
+        Title: Welcome to tem [notes]
+        Content: "Notes and stuff by [@tembeon](https://t.me/tembeon)"
+      socialIcons:
+        - name: "other"
+          title: "My Telegram channel"
+          url: "https://t.me/tembeon_notes"
+        - name: "telegram"
+          title: "Contact me on Telegram"
+          url: "https://t.me/tembeon"
+
+      # Miscellaneous
+      editPost:
+        Text: "Suggest changes"
+
   ru:
     disabled: false
     contentDir: content/ru
+    params:
+      # Основные сведения
+      description: "Заметки и прочее от [@tembeon](https://t.me/tembeon)"
+      keywords: [Блог, Разработка, tem_notes]
+
+      # Информация на главной
+      homeInfoParams:
+        Title: Добро пожаловать в tem [notes]
+        Content: "Заметки и прочее от [@tembeon](https://t.me/tembeon)"
+      socialIcons:
+        - name: "other"
+          title: "Мой канал в Telegram"
+          url: "https://t.me/tembeon_notes"
+        - name: "telegram"
+          title: "Связаться в Telegram"
+          url: "https://t.me/tembeon"
+
+      # Прочее
+      editPost:
+        Text: "Предложить изменения"
 
 title: "tem [notes]"
 theme: PaperMod
@@ -26,8 +67,6 @@ minify:
 params:
   env: production
   title: "tem [notes]"
-  description: "Notes and stuff by @tembeon"
-  keywords: [ Blog, tem_notes ]
   author: "Tembeon"
   DateFormat: "January 2, 2006"
   defaultTheme: auto # dark, light
@@ -50,20 +89,8 @@ params:
   showtoc: false
   tocopen: false
 
-  # home page settings
-  homeInfoParams:
-    Title: Welcome to tem [notes]
-    Content: "Notes and stuff by @tembeon"
-
-  socialIcons:
-    - name: "telegram channel"
-      url: "https://t.me/tembeon_notes"
-    - name: "telegram"
-      url: "https://t.me/tembeon"
-
   editPost:
     URL: "https://github.com/Tembeon/tem_notes/content"
-    Text: "Suggest Changes" # edit text
     appendFilePath: true
 
   # for search
@@ -76,7 +103,7 @@ params:
     threshold: 0.4
     minMatchCharLength: 0
     limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
-    keys: [ "title", "permalink", "summary", "content" ]
+    keys: ["title", "permalink", "summary", "content"]
 
 outputs:
   home:
@@ -94,4 +121,3 @@ menu:
       name: tags
       url: /tags/
       weight: 20
-
