@@ -8,13 +8,19 @@ languages:
     contentDir: content/en
     params:
       # General info
-      description: "Notes and stuff by BinaryCascade team"
+      description: "Notes and articles by BinaryCascade team"
       keywords: [ Blog, Development, BinaryCascade ]
 
       # Info on homepage
       homeInfoParams:
         Title: "Welcome to BinaryCascade blog"
-        Content: "Notes and stuff by BinaryCascade team"
+        Content: >
+          Notes and articles by:
+          
+          - [Artur Rafikov](https://github.com/Tembeon)
+
+          - [Lazurit11](https://github.com/Lazurit11)
+
       socialIcons:
         - name: "github"
           title: "Our GitHub"
@@ -29,13 +35,19 @@ languages:
     contentDir: content/ru
     params:
       # Основные сведения
-      description: "Заметки и прочее от BinaryCascade"
+      description: "Статьи от команды BinaryCascade"
       keywords: [ Блог, Разработка, BinaryCascade ]
 
       # Информация на главной
       homeInfoParams:
         Title: "Добро пожаловать в блог BinaryCascade"
-        Content: "Заметки и прочее от BinaryCascade"
+        Content: >
+          Для вас стараются:
+          
+          - [Artur Rafikov](https://github.com/Tembeon)
+
+          - [Lazurit11](https://github.com/Lazurit11)
+
       socialIcons:
         - name: "github"
           title: "Наш GitHub"
@@ -70,7 +82,7 @@ params:
   disableThemeToggle: false
 
   # Post settings
-  ShowReadingTime: false
+  ShowReadingTime: true
   ShowShareButtons: true
   ShowPostNavLinks: true
   ShowBreadCrumbs: true

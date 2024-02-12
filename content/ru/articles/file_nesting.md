@@ -2,8 +2,8 @@
 title: "File nesting"
 date: 2024-02-08T21:44:24+03:00
 draft: false
-tags: [ "IDE", "IntelliJ IDEA", "VS Code", ]
-author: "Tembeon"
+tags: [ "IntelliJ IDEA", "VS Code", ]
+author: "Artur Rafikov"
 showToc: true
 TocOpen: true
 UseHugoToc: true
@@ -12,8 +12,6 @@ cover:
   alt: "File nesting article cover"
   relative: true
 ---
-
-# Проблема
 
 Порой, в проекте накапливается много файлов, имеющих одно имя, но разное расширение. И они очень мешают навигации по
 файловой структуре. Например, во Flutter проектах часто используют
@@ -65,19 +63,11 @@ cover:
 
 ## Настройка в VS Code
 
-Открыть настройки (settings.json) и добавить следующие строчки:
-
-```dart
-void main() {
-  final value = 'Hello world';
-  print(value);
-}
-```
+Открыть настройки (settings.json) и добавить в конец следующие строчки:
 
 ```json
 {
-  // ...rest of settings.json
-  "explorer.fileNesting.enabled": true, // comment
+  "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.expand": false,
   "explorer.fileNesting.patterns": {
     "pubspec.yaml": ".flutter-plugins, .packages, .dart_tool, .flutter-plugins-dependencies, .metadata, .packages, pubspec.lock, build.yaml, analysis_options.yaml, all_lint_rules.yaml, flutter_*.yaml, icons_launcher.yaml",
@@ -90,6 +80,7 @@ void main() {
   }
 }
 ```
+(код настроек взят у [plugfox](https://github.com/plugfox/))
 
 Ключ это паттерн главного файла, а значение — файлы, которые будут дочерними для него.
 
