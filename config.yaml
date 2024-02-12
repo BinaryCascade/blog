@@ -37,15 +37,18 @@ languages:
         Title: "Добро пожаловать в блог BinaryCascade"
         Content: "Заметки и прочее от BinaryCascade"
       socialIcons:
-        - name: "other"
-          title: "@tembeon канал в Telegram"
+        - name: "github"
+          title: "Наш GitHub"
+          url: "https://github.com/BinaryCascade"
+        - name: "telegram"
+          title: "Канал tem_notes"
           url: "https://t.me/tembeon_notes"
 
       # Прочее
       editPost:
         Text: "Предложить изменения"
 
-title: "BinaryCascade blog"
+title: "BinaryCascade"
 theme: PaperMod
 
 # Site config
@@ -118,6 +121,10 @@ menu:
       name: tags
       url: /tags/
       weight: 20
+    - identifier: archives
+      name: archives
+      url: /archives
+      weight: 5
 
 pygmentsUseClasses: true
 markup:
