@@ -4,7 +4,7 @@ date: 2024-02-01T23:44:12+03:00
 draft: false
 
 # Meta of the article
-tags: [ "Flutter", "UI", "Icons" ]
+tags: [ "Flutter", "Figma", "Design"]
 author: [ "Artur Rafikov" ]
 cover:
   image: "/articles/font_icon_pack/cover.png" # Relative path to the cover image
