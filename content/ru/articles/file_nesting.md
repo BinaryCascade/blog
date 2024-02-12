@@ -2,8 +2,8 @@
 title: "File nesting"
 date: 2024-02-08T21:44:24+03:00
 draft: false
-tags: [ "IDE", "IntelliJ IDEA", "VS Code", ]
-author: "Tembeon"
+tags: [ "IntelliJ IDEA", "VS Code", ]
+author: "Artur Rafikov"
 showToc: true
 TocOpen: true
 UseHugoToc: true
@@ -66,13 +66,6 @@ cover:
 ## Настройка в VS Code
 
 Открыть настройки (settings.json) и добавить следующие строчки:
-
-```dart
-void main() {
-  final value = 'Hello world';
-  print(value);
-}
-```
 
 ```json
 {
