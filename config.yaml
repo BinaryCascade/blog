@@ -1,5 +1,5 @@
 # Meta data
-baseURL: "https://example.org/"
+baseURL: "https://binarycascade.dev/"
 
 defaultContentLanguage: ru
 languages:
@@ -8,20 +8,17 @@ languages:
     contentDir: content/en
     params:
       # General info
-      description: "Notes and stuff by @tembeon"
-      keywords: [Blog, Development, tem_notes]
+      description: "Notes and stuff by BinaryCascade team"
+      keywords: [ Blog, Development, BinaryCascade ]
 
       # Info on homepage
       homeInfoParams:
-        Title: Welcome to tem [notes]
-        Content: "Notes and stuff by [@tembeon](https://t.me/tembeon)"
+        Title: "Welcome to BinaryCascade blog"
+        Content: "Notes and stuff by BinaryCascade team"
       socialIcons:
-        - name: "other"
-          title: "My Telegram channel"
-          url: "https://t.me/tembeon_notes"
-        - name: "telegram"
-          title: "Contact me on Telegram"
-          url: "https://t.me/tembeon"
+        - name: "github"
+          title: "Our GitHub"
+          url: "https://github.com/BinaryCascade"
 
       # Miscellaneous
       editPost:
@@ -32,26 +29,23 @@ languages:
     contentDir: content/ru
     params:
       # Основные сведения
-      description: "Заметки и прочее от [@tembeon](https://t.me/tembeon)"
-      keywords: [Блог, Разработка, tem_notes]
+      description: "Заметки и прочее от BinaryCascade"
+      keywords: [ Блог, Разработка, BinaryCascade ]
 
       # Информация на главной
       homeInfoParams:
-        Title: Добро пожаловать в tem [notes]
-        Content: "Заметки и прочее от [@tembeon](https://t.me/tembeon)"
+        Title: "Добро пожаловать в блог BinaryCascade"
+        Content: "Заметки и прочее от BinaryCascade"
       socialIcons:
         - name: "other"
-          title: "Мой канал в Telegram"
+          title: "@tembeon канал в Telegram"
           url: "https://t.me/tembeon_notes"
-        - name: "telegram"
-          title: "Связаться в Telegram"
-          url: "https://t.me/tembeon"
 
       # Прочее
       editPost:
         Text: "Предложить изменения"
 
-title: "tem [notes]"
+title: "BinaryCascade blog"
 theme: PaperMod
 
 # Site config
@@ -66,8 +60,8 @@ minify:
 
 params:
   env: production
-  title: "tem [notes]"
-  author: "Tembeon"
+  title: "BinaryCascade blog"
+  author: "BinaryCascade team"
   DateFormat: "January 2, 2006"
   defaultTheme: auto # dark, light
   disableThemeToggle: false
@@ -89,8 +83,11 @@ params:
   showtoc: false
   tocopen: false
 
+  assets:
+    disableHLJS: true
+
   editPost:
-    URL: "https://github.com/Tembeon/tem_notes/content"
+    URL: "https://github.com/BinaryCascade/blog/content"
     appendFilePath: true
 
   # for search
@@ -103,7 +100,7 @@ params:
     threshold: 0.4
     minMatchCharLength: 0
     limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
-    keys: ["title", "permalink", "summary", "content"]
+    keys: [ "title", "permalink", "summary", "content" ]
 
 outputs:
   home:
@@ -121,3 +118,18 @@ menu:
       name: tags
       url: /tags/
       weight: 20
+
+pygmentsUseClasses: true
+markup:
+  highlight:
+    noClasses: false
+    anchorLineNos: false
+    codeFences: true
+    # guessSyntax: true
+    lineNos: true
+    style: github-dark
+
+  tableOfContents:
+    endLevel: 3
+    ordered: false
+    startLevel: 1
