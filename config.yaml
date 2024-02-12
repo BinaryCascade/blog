@@ -62,7 +62,7 @@ params:
   env: production
   title: "BinaryCascade blog"
   author: "BinaryCascade team"
-  DateFormat: "January 2, 2006"
+  DateFormat: "2 January, 2006"
   defaultTheme: auto # dark, light
   disableThemeToggle: false
 
